@@ -1,0 +1,9 @@
+coverlet D:\005.小洪\UT\UT.Project\UT.TestPrject\bin\Debug\net8.0\UT.TestPrject.dll --include "[UT.*]UT.TestPrject.AppTest1" --target "dotnet" --targetargs "test --no-build" --output "D:\005.小洪\UT\UT.Project\UT.TestPrject\result\coverage" --format cobertura
+
+coverlet D:\005.小洪\UT\UT.Project\UT.TestPrject\bin\Debug\net8.0\UT.TestPrject.dll --include "[UT.*]UT.TestPrject.AppTest" --target "dotnet" --targetargs "test --no-build" --output "D:\005.小洪\UT\UT.Project\UT.TestPrject\result\coverage" --format cobertura
+
+coverlet D:\005.小洪\UT\UT.Project\UT.TestPrject\bin\Debug\net8.0\UT.TestPrject.dll --target "dotnet" --targetargs "test --no-build" --output "D:\005.小洪\UT\UT.Project\UT.TestPrject\result\coverage" --format cobertura
+
+
+dotnet tool run reportgenerator -reports:./result/coverage.cobertura.xml -targetdir:./CodeCoverage -reporttypes:Html
+
