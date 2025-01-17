@@ -7,3 +7,13 @@ coverlet D:\005.小洪\UT\UT.Project\UT.TestPrject\bin\Debug\net8.0\UT.TestPrjec
 
 dotnet tool run reportgenerator -reports:./result/coverage.cobertura.xml -targetdir:./CodeCoverage -reporttypes:Html
 
+
+
+
+
+coverlet bin\Debug\net8.0\UT.TestProject.dll --include-test-assembly --format "opencover" --output "coverage\coverage.xml" --target "dotnet" --targetargs "test . --no-build" --include "[UT.App]*"
+
+coverlet bin\Debug\net8.0\UT.TestProject.dll --include-test-assembly --format "opencover" --output "coverage\coverage.xml" --target "dotnet" --targetargs "test . --no-build --filter FullyQualifiedName~TestClassTest" --include "[UT.App]*.AppClass"
+
+
+
